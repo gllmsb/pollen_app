@@ -1,0 +1,266 @@
+:root {
+    --light-green: #70C2B4;
+    --neutral-green: #50B8AE;
+    --active-green: #4BA598;
+    --pink: #EC9AAA;
+    --yellow: #F1C879;
+    --light-blue: #6793C4;
+    --bg: #F2F2F2;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* MAP */
+#map {
+    height: calc(100vh - 200px); /* Subtract the height of the header and footer */
+}
+
+/* HEADER */
+.header-main {
+    background-color: var(--active-green);
+    padding: 2rem;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+/* FOOTER */
+.footer-main {
+    padding: 2rem;
+    background-color: var(--active-green);
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed; 
+    bottom: 0; 
+    width: 100%; 
+}
+
+.footer-main {
+    padding: 2rem;
+    background-color: var(--active-green);
+    display: flex;
+    justify-content: space-evenly; 
+}
+
+.footer-main img {
+    max-width: 25px;
+}
+
+/* DROPDOWN */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: inherit;
+    color: white;
+    padding: 10px;
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 999;
+    max-height: 200px; 
+    overflow-y: auto;  
+}
+
+.dropdown-content option {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.dropdown.open .dropdown-content {
+    display: block;
+}
+   
+/* DIALOG */
+.dialog {
+    width: 300px;
+    padding: 20px;
+    border: 3px solid var(--active-green);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.dialog-content {
+    text-align: center;
+}
+
+.dialog button {
+    margin: 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirmDelete {
+    background-color: #4CAF50;
+    color: white;
+}
+
+#cancelDelete {
+    background-color: #f44336;
+    color: white;
+}
+
+
+/* #settingDialog {
+    display: none; 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+}
+
+
+#settingDialog[open] {
+    display: block;
+} */
+
+/* SETTINGS CONTAINER */
+#settingContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 80%;
+    max-width: 400px;
+    padding: 20px;
+    background-color: #fff;
+    border: 2px solid var(--active-green);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+
+#settingContainer h2 {
+    text-align: center;
+}
+
+/* TOGGLE SWITCHES*/
+
+ul {
+    list-style: none;
+    padding: 0; 
+}
+
+li {
+    margin-bottom: 1rem; 
+}
+
+.pollen-list {
+    display: flex;
+    flex-direction: column;
+}
+
+#pollenList {
+    margin-top: 1rem; 
+}
+
+.switch {
+    margin-left: auto; 
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: #ccc;
+    border-radius: 34px;
+    transition: background-color 0.3s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    bottom: 4px;
+    top: 2px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+}
+
+input:checked + .slider {
+    background-color: var(--active-green);
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+/* CARD CONTAINER */
+#pageContainer {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    min-height: calc(100vh - 100px); 
+    padding-bottom: 50px; 
+    box-sizing: border-box; 
+}
+
+#cardContainer {
+    display: flex;  
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 20px; 
+    max-height: calc(100% - 20px); 
+    overflow-y: auto; 
+    margin-top: 2rem;
+
+}
+
+.card {
+    display: flex;
+    width: 400px; 
+    margin-right: 20px; 
+    margin-bottom: 0; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px; 
+    overflow: hidden;
+}
+
+.card img {
+    width: 150px; 
+    height: auto; 
+    border-radius: 10px 0 0 10px; 
+}
+
+.card-content {
+    flex: 1;
+    padding: 20px; 
+}
+
+.card-content h3 {
+    margin-top: 0; 
+}
+
+.card-content p {
+    margin-bottom: 0; 
+}
